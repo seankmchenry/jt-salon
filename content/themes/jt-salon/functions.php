@@ -43,11 +43,18 @@ require get_template_directory() . '/inc/plugins/soil-setup.php';
 require get_template_directory() . '/inc/plugins/tgm-setup.php';
 
 /**
+ * Advanced Custom Fields
+ */
+require get_template_directory() . '/inc/plugins/acf-setup.php';
+
+/**
  * WP CPT setup
  */
 // require get_template_directory() . '/inc/plugins/cpt-setup.php';
 
-/**
- * Advanced Custom Fields
+/*
+Custom Widgets
  */
-require get_template_directory() . '/inc/plugins/acf-setup.php';
+require get_template_directory() . '/inc/widgets/cta-widget.php';
+require get_template_directory() . '/inc/widgets/map-widget.php';
+require get_template_directory() . '/inc/widgets/social-widget.php';

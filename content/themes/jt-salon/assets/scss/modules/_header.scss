@@ -5,7 +5,15 @@
 /*
 Header
  */
-.site-header {}
+.site-header {
+  text-align: center;
+  background-color: $link-color;
+  padding: 0.25rem 0;
+
+  @include break-sm {
+    padding: 0.75rem 0;
+  }
+}
 
 /*
 Navigation
@@ -17,7 +25,20 @@ Navigation
     margin: 0;
   }
 }
-.main-navigation {}
+.main-navigation {
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 0.5em;
+  }
+  a, img {
+    display: block;
+  }
+  a {
+    padding: 0.5em;
+    @include link-color(white, darken(white, 15%));
+  }
+}
 
 /*
 Mobile Nav

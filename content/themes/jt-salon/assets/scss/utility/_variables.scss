@@ -6,8 +6,8 @@
 Typography
  */
 /* Variables */
-$sans-serif: 'Source Sans Pro', Helvetica, sans-serif;
-$serif: Georgia, serif;
+$sans-serif: 'Open Sans', Helvetica, sans-serif;
+$serif: 'Playfair Display', Georgia, serif;
 
 /* Definitions */
 $body-font: $sans-serif;
@@ -28,19 +28,23 @@ Colors
 
 /* Variables */
 $brand-colors: (
-  'blue': #0077CC,
   'gray-dark': #404040,
-  'gray-light': #DDD
+  'gray-light': #DDD,
+  'gray-lightest': #F0F0F0,
+  'orange': #F86834,
 );
 
 /* Definitions */
 $text-color: brand-color('gray-dark');
-$link-color: brand-color('blue');
+$link-color: brand-color('orange');
 
 $heading-color: $text-color;
 $button-color: $link-color;
 
+$section-bg-color: brand-color('gray-lightest');
+
 $border-color: brand-color('gray-light');
+$border-color--dark: darken($border-color, 25%);
 
 /* Social */
 $facebook: #415696;

@@ -114,3 +114,43 @@ function _s_get_feat_img_url( $size ) {
   $img_url = $img_array[0];
   return $img_url;
 }
+
+/**
+ * Add brand logo at end of nav
+ *
+ * @link https://goo.gl/mDhYeh
+ */
+function _s_nav_wrap() {
+  // check if logo is uploaded
+  if ( get_theme_mod( 'brand_logo' ) ) {
+    // set up variables needed by logo
+    $img = get_theme_mod( 'brand_logo' );
+    $url = esc_url( home_url( '/' ) );
+    $alt = get_bloginfo( 'name' );
+
+    // set up the nav wrapper
+    $wrap = '<ul id="%1$s" class="%2$s">';
+    $wrap .= '<li class="site-logo"><a class="site-logo--img bg-contain" href="'. $url .'">';
+    $wrap .= '<img src="'. $img .'" alt="'. $alt .'"></a></li>';
+    $wrap .= '%3$s';
+    $wrap .= '</ul>';
+  } else {
+    $wrap = '<ul id="%1$s" class="%2$s">%3$s</ul>';
+  }
+  return $wrap;
+}
+
+/**
+ * Custom page title display
+ */
+function _s_custom_page_title() {
+  global $post;
+
+  // check for custom page title
+  if ( get_field( 'custom_page_title' ) ) {
+    $title = get_field( 'custom_page_title', $post->ID );
+  } else {
+    $title = get_the_title( $post );
+  }
+  echo $title;
+}

@@ -3,6 +3,88 @@
  */
 
 /*
+Pages (Global)
+ */
+.entry-header {
+  margin-bottom: 1rem;
+
+  @include break-lg {
+    margin-bottom: 2rem;
+  }
+}
+
+.cta-section--text {
+  p {
+    margin-bottom: 0;
+  }
+}
+
+
+/*
 Home
  */
 .home {}
+
+/*
+Home: Sections
+ */
+.home-section {
+  padding: 2rem 0;
+
+  @include break-md {
+    padding: 2.75rem 0;
+  }
+}
+
+/*
+Home: Hero
+ */
+.home-section--hero {
+  height: 300px;
+
+  @include break-sm {
+    height: 400px;
+  }
+  @include break-md {
+    height: 450px;
+  }
+  @include break-lg {
+    height: 500px;
+  }
+}
+.hero-section__inner {
+  @include table-va;
+}
+.hero-section__text {
+  color: white;
+  font-size: $h0;
+  font-family: $serif;
+}
+
+/*
+Home: Message
+ */
+.home-section--message {
+  background-color: black;
+
+  p {
+    margin-top: 0;
+    font-size: $h2;
+    line-height: 1.4;
+    color: white;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/*
+Home: CTA
+ */
+.home-section--cta {}
+.cta-section__headline {
+  margin: 0 0 1.25rem;
+  font-size: $h1;
+  text-transform: lowercase;
+}

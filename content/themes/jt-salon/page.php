@@ -16,22 +16,29 @@ get_header(); ?>
 
   <div id="content" class="site-content">
 
-  	<div id="primary" class="content-area">
-  		<main id="main" class="site-main" role="main">
+    <div id="primary" class="content-area">
+      <main id="main" class="site-main" role="main">
 
-  			<?php
-  			while ( have_posts() ) : the_post();
+        <div class="container">
+          <div class="row center">
+            <div class="col-xs-12 col-sm-10 left-align">
 
-  				get_template_part( 'templates/content', 'page' );
+              <?php
+              while ( have_posts() ) : the_post();
 
-  			endwhile; // End of the loop.
-  			?>
+                get_template_part( 'templates/content', 'page' );
 
-  		</main><!-- #main -->
-  	</div><!-- #primary -->
+              endwhile; // End of the loop.
+              ?>
+
+            </div>
+          </div><!-- .row -->
+        </div><!-- .container -->
+
+      </main><!-- #main -->
+    </div><!-- #primary -->
 
   </div><!-- #content -->
 
 <?php
-get_sidebar();
 get_footer();

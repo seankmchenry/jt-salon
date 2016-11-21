@@ -46,6 +46,12 @@ Media Queries
 /*
 Mixins
  */
+.bg-cover {
+  @include bg-cover;
+}
+.bg-darken {
+  @include bg-darken;
+}
 .sr-only, .srt {
   @include sr-only;
 }

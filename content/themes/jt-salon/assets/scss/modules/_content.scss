@@ -8,7 +8,31 @@ Site
 .site {
   background-color: white;
 }
-.site-content {}
+.site-content {
+  padding: 2rem 0;
+
+  @include break-sm {
+    padding: 2.75rem 0;
+  }
+  @include break-lg {
+    padding: 3rem 0;
+  }
+}
+
+/*
+Featured image
+ */
+.wp-post-image {
+  display: block;
+  margin: 0 auto $margin-p;
+
+  @include break-sm {
+    margin-bottom: 2rem;
+  }
+  @include break-lg {
+    margin-bottom: 3rem;
+  }
+}
 
 /*
 Comments

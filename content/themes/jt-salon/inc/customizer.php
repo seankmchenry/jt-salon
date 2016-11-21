@@ -97,6 +97,20 @@ function _s_customizer_add_fields( $wp_customize ) {
     'section' => 'contact_info',
     'type' => 'text'
   ) );
+  $wp_customize->add_setting( 'street_address' );
+  $wp_customize->add_control( 'street_address', array(
+    'label' => __( 'Street Address', '_s' ),
+    'description' => __( 'Add the street address of the business.', '_s' ),
+    'section' => 'contact_info',
+    'type' => 'text'
+  ) );
+  $wp_customize->add_setting( 'city_state_zip' );
+  $wp_customize->add_control( 'city_state_zip', array(
+    'label' => __( 'City, State & Zip', '_s' ),
+    'description' => __( 'Add the city, state and zip code of the business.', '_s' ),
+    'section' => 'contact_info',
+    'type' => 'text'
+  ) );
 
   /* Social Media */
   $wp_customize->add_setting( 'facebook_url' );
@@ -106,10 +120,24 @@ function _s_customizer_add_fields( $wp_customize ) {
     'section' => 'social_media',
     'type' => 'url'
   ) );
+  $wp_customize->add_setting( 'instagram_url' );
+  $wp_customize->add_control( 'instagram_url', array(
+    'label' => __( 'Instagram URL', '_s' ),
+    'description' => __( 'Add a link to your Instagram page.', '_s' ),
+    'section' => 'social_media',
+    'type' => 'url'
+  ) );
   $wp_customize->add_setting( 'twitter_url' );
   $wp_customize->add_control( 'twitter_url', array(
     'label' => __( 'Twitter URL', '_s' ),
     'description' => __( 'Add a link to your Twitter page.', '_s' ),
+    'section' => 'social_media',
+    'type' => 'url'
+  ) );
+  $wp_customize->add_setting( 'youtube_url' );
+  $wp_customize->add_control( 'youtube_url', array(
+    'label' => __( 'YouTube URL', '_s' ),
+    'description' => __( 'Add a link to your YouTube page.', '_s' ),
     'section' => 'social_media',
     'type' => 'url'
   ) );

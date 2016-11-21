@@ -11,13 +11,13 @@ $space-4: 4rem !default;
 
 /* Basscss Padding */
 
-.p0  { padding: 0 !important; }
+.p0  { padding: 0 !important }
 
-.pt0 { padding-top: 0 !important; }
+.pt0 { padding-top: 0 !important }
 
 .pr0 { padding-right: 0 }
 
-.pb0 { padding-bottom: 0 !important; }
+.pb0 { padding-bottom: 0 !important }
 
 .pl0 { padding-left: 0 }
 
@@ -27,11 +27,11 @@ $space-4: 4rem !default;
 
 .p1  { padding:        $space-1 }
 
-.pt1 { padding-top:    $space-1 }
+.pt1 { padding-top:    $space-1 !important }
 
 .pr1 { padding-right:  $space-1 }
 
-.pb1 { padding-bottom: $space-1 }
+.pb1 { padding-bottom: $space-1 !important }
 
 .pl1 { padding-left:   $space-1 }
 
@@ -41,11 +41,11 @@ $space-4: 4rem !default;
 
 .p2  { padding:        $space-2 }
 
-.pt2 { padding-top:    $space-2 }
+.pt2 { padding-top:    $space-2 !important }
 
 .pr2 { padding-right:  $space-2 }
 
-.pb2 { padding-bottom: $space-2 }
+.pb2 { padding-bottom: $space-2 !important }
 
 .pl2 { padding-left:   $space-2 }
 
@@ -55,11 +55,11 @@ $space-4: 4rem !default;
 
 .p3  { padding:        $space-3 }
 
-.pt3 { padding-top:    $space-3 }
+.pt3 { padding-top:    $space-3 !important }
 
 .pr3 { padding-right:  $space-3 }
 
-.pb3 { padding-bottom: $space-3 }
+.pb3 { padding-bottom: $space-3 !important }
 
 .pl3 { padding-left:   $space-3 }
 
@@ -69,11 +69,11 @@ $space-4: 4rem !default;
 
 .p4  { padding:        $space-4 }
 
-.pt4 { padding-top:    $space-4 }
+.pt4 { padding-top:    $space-4 !important }
 
 .pr4 { padding-right:  $space-4 }
 
-.pb4 { padding-bottom: $space-4 }
+.pb4 { padding-bottom: $space-4 !important }
 
 .pl4 { padding-left:   $space-4 }
 

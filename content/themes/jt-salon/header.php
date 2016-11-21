@@ -18,7 +18,7 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <!-- Web fonts -->
-<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700|Playfair+Display:400,400i,700" rel="stylesheet">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -36,22 +36,11 @@
 get_template_part( 'templates/global/mobile', 'nav' ); ?>
 
 <div id="page" class="site">
-	<a class="skip-link sr-only" href="#main"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
+  <a class="skip-link sr-only" href="#main"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-
-			<?php // get tagline text
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description srt"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation main-nav" role="navigation">
-			<button class="menu-toggle btn btn-primary visible-sm" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', '_s' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_class' => 'main-nav__menu hidden-sm' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+  <header id="masthead" class="site-header" role="banner">
+    <nav id="site-navigation" class="main-navigation main-nav" role="navigation">
+      <button class="menu-toggle btn btn-primary visible-sm" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', '_s' ); ?></button>
+      <?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_class' => 'main-nav__menu hidden-sm', 'items_wrap' => _s_nav_wrap() ) ); ?>
+    </nav><!-- #site-navigation -->
+  </header><!-- #masthead -->

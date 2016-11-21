@@ -3,11 +3,60 @@
  */
 
 /*
-Footer
+Footer: Top
  */
-.site-footer {
+.site-footer__top {
+  text-align: center;
+}
+.footer-nav__area {
+  padding: 1.5rem 0;
+  border-top: 1px solid $border-color;
+
+  @include break-lg {
+    padding: 2.5rem 0;
+  }
+}
+.footer-nav__menu {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  font-size: 0;
+
+  li {
+    display: inline-block;
+    padding: 0 0.5rem;
+    border-right: 1px solid $link-color;
+    font-size: initial;
+
+    &:first-of-type {
+      border-left: 1px solid $link-color;
+    }
+
+    @include break-lg {
+      padding: 0 0.75rem;
+    }
+  }
+  a {
+    font-size: $h5;
+    font-weight: 600;
+    text-transform: uppercase;
+    @include link-color(black, $link-color);
+  }
+}
+
+/*
+Footer: Bottom
+ */
+.site-footer__bottom {
   padding: 1rem 0;
   font-size: 0.875rem;
+  background-color: $section-bg-color;
+}
+.footer-bottom__credits {
+  a {
+    @include link-color($text-color, $link-color);
+    border-bottom: 1px solid $border-color--dark;
+  }
 }
 
 /*

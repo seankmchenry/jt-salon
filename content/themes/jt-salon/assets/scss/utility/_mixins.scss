@@ -13,6 +13,35 @@ Animation
 }
 
 /*
+BG Cover
+ */
+@mixin bg-cover {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+/*
+BG Darken
+ */
+@mixin bg-darken($color: black, $opacity: 0.3) {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color, $opacity);
+  }
+
+  > div {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+/*
 Clearfix
  */
 @mixin clearfix() {
@@ -87,6 +116,20 @@ Screen reader
   width: 1px;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
+}
+
+/*
+Table vertical align
+ */
+@mixin table-va {
+  display: table;
+  width: 100%;
+  height: 100%;
+
+  > div {
+    display: table-cell;
+    vertical-align: middle;
+  }
 }
 
 /*
