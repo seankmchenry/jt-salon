@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: FAQs Page
+ * Template Name: Highlights Page
  *
  * @package _s
  */
@@ -33,43 +33,43 @@ get_header(); ?>
 
                       the_content();
 
-                      /* FAQ Sections */
-                      if ( have_rows( 'faq_sections' ) ) :
+                      /* Highlight Sections */
+                      if ( have_rows( 'highlight_sections' ) ) :
                         // loop through sections
-                        while ( have_rows( 'faq_sections' ) ) : the_row(); ?>
+                        while ( have_rows( 'highlight_sections' ) ) : the_row(); ?>
 
                           <!-- Section -->
-                          <div class="page-section faq-section mt3 mb3">
-                            <div class="text-area faq-section__text-area mb3">
+                          <div class="page-section highlight-section mt3 mb3">
+                            <div class="text-area highlight-section__text-area mb3">
                               <?php
                               /* Title */
                               if ( get_sub_field( 'section_title' ) ) { ?>
-                                <h2 class="section-title faqs-section__title mb2 color-link"><?php echo strtolower( get_sub_field( 'section_title' ) ); ?></h2>
+                                <h2 class="section-title highlight-section__title mb2 color-link"><?php the_sub_field( 'section_title' ); ?></h2>
                               <?php }
 
                               /* Text */
                               if ( get_sub_field( 'section_text' ) ) { ?>
-                                <div class="section-text faqs-section__text">
+                                <div class="section-text highlight-section__text">
                                   <?php echo wpautop( get_sub_field( 'section_text' ) ); ?>
                                 </div>
                               <?php } ?>
                             </div>
 
-                            <?php /* FAQs */
-                            if ( have_rows( 'faqs' ) ) {
-                              // loop through FAQs
-                              while ( have_rows( 'faqs' ) ) : the_row(); ?>
-                                <div class="faq-item faq-section__faq mt0 mb2">
+                            <?php /* Highlights */
+                            if ( have_rows( 'highlights' ) ) {
+                              // loop through highlights
+                              while ( have_rows( 'highlights' ) ) : the_row(); ?>
+                                <div class="highlight-item highlight-section__highlight mt0 mb2">
                                   <?php
                                   /* Question */
-                                  if ( get_sub_field( 'question' ) ) { ?>
-                                    <h3 class="faq-question faq-item__question mt0 mb1 fw-600"><?php the_sub_field( 'question' ); ?></h3>
+                                  if ( get_sub_field( 'highlight_headline' ) ) { ?>
+                                    <h3 class="highlight-question highlight-item__headline mt0 mb1 fw-600"><?php the_sub_field( 'highlight_headline' ); ?></h3>
                                   <?php }
 
                                   /* Answer */
-                                  if ( get_sub_field( 'answer' ) ) { ?>
-                                    <div class="faq-answer faq-item__answer">
-                                      <?php echo wpautop( get_sub_field( 'answer' ) ); ?>
+                                  if ( get_sub_field( 'highlight_text' ) ) { ?>
+                                    <div class="highlight-answer highlight-item__text">
+                                      <?php echo wpautop( get_sub_field( 'highlight_text' ) ); ?>
                                     </div>
                                   <?php } ?>
                                 </div>
