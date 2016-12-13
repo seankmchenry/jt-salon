@@ -49,3 +49,6 @@ $border-radius: 3px !default;
 .rounded-left   { border-radius: $border-radius 0 0 $border-radius }
 
 .not-rounded { border-radius: 0 }
+
+// custom classes
+.br50 { border-radius: 50% }

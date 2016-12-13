@@ -71,6 +71,19 @@ Font Smoothing
 }
 
 /*
+Hover Lighten
+ */
+@mixin hover-lighten {
+  @include animate(opacity);
+  -webkit-backface-visibility: hidden;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+}
+
+/*
 Link Color
  */
 @mixin link-color($color: $link-color, $hover: darken($link-color, 10%)) {

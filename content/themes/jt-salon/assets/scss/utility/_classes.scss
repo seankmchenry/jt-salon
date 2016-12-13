@@ -3,6 +3,19 @@
  */
 
 /*
+Colors
+ */
+.color-link { color: $link-color; }
+.color-text { color: $text-color; }
+
+/*
+Font Weights
+ */
+.fw-400 { font-weight: 400; }
+.fw-600 { font-weight: 600; }
+.fw-700 { font-weight: 700; }
+
+/*
 Margins
  */
 .mtp { margin-top: $margin-p !important; }
@@ -51,6 +64,9 @@ Mixins
 }
 .bg-darken {
   @include bg-darken;
+}
+.hover-lighten {
+  @include hover-lighten;
 }
 .sr-only, .srt {
   @include sr-only;

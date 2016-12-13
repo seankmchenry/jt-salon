@@ -88,3 +88,21 @@ Home: CTA
   font-size: $h1;
   text-transform: lowercase;
 }
+
+/*
+Services Page
+ */
+.service-item__name {
+  border-left: 1px solid $link-color;
+  border-right: 1px solid $link-color;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  a {
+    @include link-color($text-color, $link-color);
+  }
+}
+
+/*
+Salon Page
+ */

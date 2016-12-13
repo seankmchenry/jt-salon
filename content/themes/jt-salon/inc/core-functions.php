@@ -33,8 +33,8 @@ function _s_custom_image_sizes() {
   update_option( 'medium_size_h', 475 );
   update_option( 'medium_crop', 1 );
 
-  update_option( 'thumbnail_size_w', 200 );
-  update_option( 'thumbnail_size_h', 200 );
+  update_option( 'thumbnail_size_w', 300 );
+  update_option( 'thumbnail_size_h', 300 );
   update_option( 'thumbnail_crop', 1 );
 
   // hero size
@@ -148,9 +148,9 @@ function _s_custom_page_title() {
 
   // check for custom page title
   if ( get_field( 'custom_page_title' ) ) {
-    $title = get_field( 'custom_page_title', $post->ID );
+    $title = strtolower( get_field( 'custom_page_title', $post->ID ) );
   } else {
-    $title = get_the_title( $post );
+    $title = strtolower( get_the_title( $post ) );
   }
   echo $title;
 }
