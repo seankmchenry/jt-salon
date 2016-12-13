@@ -39,7 +39,7 @@ get_header(); ?>
                         while ( have_rows( 'highlight_sections' ) ) : the_row(); ?>
 
                           <!-- Section -->
-                          <div class="page-section highlight-section mt3 mb3">
+                          <div class="page-section highlight-section mt3 mb4">
                             <div class="text-area highlight-section__text-area mb3">
                               <?php
                               /* Title */
