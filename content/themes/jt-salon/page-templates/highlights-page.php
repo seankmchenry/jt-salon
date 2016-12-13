@@ -49,7 +49,7 @@ get_header(); ?>
 
                               /* Text */
                               if ( get_sub_field( 'section_text' ) ) { ?>
-                                <div class="section-text highlight-section__text">
+                                <div class="section-text highlight-section__text mb3">
                                   <?php echo wpautop( get_sub_field( 'section_text' ) ); ?>
                                 </div>
                               <?php } ?>

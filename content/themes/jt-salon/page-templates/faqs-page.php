@@ -40,7 +40,7 @@ get_header(); ?>
 
                           <!-- Section -->
                           <div class="page-section faq-section mt3 mb4">
-                            <div class="text-area faq-section__text-area mb3">
+                            <div class="text-area faq-section__text-area">
                               <?php
                               /* Title */
                               if ( get_sub_field( 'section_title' ) ) { ?>
@@ -49,7 +49,7 @@ get_header(); ?>
 
                               /* Text */
                               if ( get_sub_field( 'section_text' ) ) { ?>
-                                <div class="section-text faqs-section__text">
+                                <div class="section-text faqs-section__text mb3">
                                   <?php echo wpautop( get_sub_field( 'section_text' ) ); ?>
                                 </div>
                               <?php } ?>
