@@ -39,7 +39,7 @@ get_header(); ?>
                         while ( have_rows( 'faq_sections' ) ) : the_row(); ?>
 
                           <!-- Section -->
-                          <div class="page-section faq-section mt3 mb4">
+                          <div class="page-section faq-section mt3 mb2 sm-mb3 md-mb4">
                             <div class="text-area faq-section__text-area">
                               <?php
                               /* Title */
