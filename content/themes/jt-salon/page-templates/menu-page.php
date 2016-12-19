@@ -45,62 +45,66 @@ get_header(); ?>
                     if ( have_rows( 'services' ) ) { ?>
                       <div class="menu-area service-items mt3">
 
-                        <table class="services-table service-items__table mx-auto">
-                          <tr>
-                            <th>Stylist Levels</th>
-                            <th><div class="rounded"><span>Entry<span></th>
-                            <th><div class="rounded"><span>1</span></th>
-                            <th><div class="rounded"><span>2</span></th>
-                            <th><div class="rounded"><span>3</span></th>
-                            <th><div class="rounded"><span>4</span></th>
-                            <th><div class="rounded"><span>5</span></th>
-                            <th><div class="rounded"><span>6</span></th>
-                          </tr>
+                        <div class="table-container table-container--md">
+                          <table class="services-table service-items__table mx-auto">
+                            <thead>
+                              <tr>
+                                <th>Stylist Levels</th>
+                                <th><div class="rounded"><span>Entry</span></div></th>
+                                <th><div class="rounded"><span>1</span></div></th>
+                                <th><div class="rounded"><span>2</span></div></th>
+                                <th><div class="rounded"><span>3</span></div></th>
+                                <th><div class="rounded"><span>4</span></div></th>
+                                <th><div class="rounded"><span>5</span></div></th>
+                                <th><div class="rounded"><span>6</span></div></th>
+                              </tr>
+                            </thead>
 
-                          <?php // loop through menu items
-                          while ( have_rows( 'services' ) ): the_row();
-                            // set level variables
-                            $lev_e = get_sub_field( 'entry_level_price' );
-                            $lev_1 = get_sub_field( 'level_1_price' );
-                            $lev_2 = get_sub_field( 'level_2_price' );
-                            $lev_3 = get_sub_field( 'level_3_price' );
-                            $lev_4 = get_sub_field( 'level_4_price' );
-                            $lev_5 = get_sub_field( 'level_5_price' );
-                            $lev_6 = get_sub_field( 'level_6_price' );
-                            ?>
+                            <tbody>
+                              <?php // loop through menu items
+                              while ( have_rows( 'services' ) ): the_row();
+                                // set level variables
+                                $lev_e = get_sub_field( 'entry_level_price' );
+                                $lev_1 = get_sub_field( 'level_1_price' );
+                                $lev_2 = get_sub_field( 'level_2_price' );
+                                $lev_3 = get_sub_field( 'level_3_price' );
+                                $lev_4 = get_sub_field( 'level_4_price' );
+                                $lev_5 = get_sub_field( 'level_5_price' );
+                                $lev_6 = get_sub_field( 'level_6_price' );
+                                ?>
 
-                            <tr>
-                              <?php
-                              /* Service Title */
-                              if ( get_sub_field( 'service_title' ) ) { ?>
-                                <td><?php the_sub_field( 'service_title' ); ?></td>
-                              <?php } ?>
+                                <tr>
+                                  <?php
+                                  /* Service Title */
+                                  if ( get_sub_field( 'service_title' ) ) { ?>
+                                    <td><?php the_sub_field( 'service_title' ); ?></td>
+                                  <?php } ?>
 
-                              <!-- Entry level price -->
-                              <td><?php echo _s_menu_item_price( $lev_e ); ?></td>
+                                  <!-- Entry level price -->
+                                  <td><?php echo _s_menu_item_price( $lev_e ); ?></td>
 
-                              <!-- Level 1 price -->
-                              <td><?php echo _s_menu_item_price( $lev_1 ); ?></td>
+                                  <!-- Level 1 price -->
+                                  <td><?php echo _s_menu_item_price( $lev_1 ); ?></td>
 
-                              <!-- Level 2 price -->
-                              <td><?php echo _s_menu_item_price( $lev_2 ); ?></td>
+                                  <!-- Level 2 price -->
+                                  <td><?php echo _s_menu_item_price( $lev_2 ); ?></td>
 
-                              <!-- Level 3 price -->
-                              <td><?php echo _s_menu_item_price( $lev_3 ); ?></td>
+                                  <!-- Level 3 price -->
+                                  <td><?php echo _s_menu_item_price( $lev_3 ); ?></td>
 
-                              <!-- Level 4 price -->
-                              <td><?php echo _s_menu_item_price( $lev_4 ); ?></td>
+                                  <!-- Level 4 price -->
+                                  <td><?php echo _s_menu_item_price( $lev_4 ); ?></td>
 
-                              <!-- Level 5 price -->
-                              <td><?php echo _s_menu_item_price( $lev_5 ); ?></td>
+                                  <!-- Level 5 price -->
+                                  <td><?php echo _s_menu_item_price( $lev_5 ); ?></td>
 
-                              <!-- Level 6 price -->
-                              <td><?php echo _s_menu_item_price( $lev_6 ); ?></td>
-                            </tr>
-                          <?php endwhile; ?>
-
-                        </table>
-
+                                  <!-- Level 6 price -->
+                                  <td><?php echo _s_menu_item_price( $lev_6 ); ?></td>
+                                </tr>
+                              <?php endwhile; ?>
+                            </tbody>
+                          </table>
+                        </th>
                       </div>
                     <?php }
 

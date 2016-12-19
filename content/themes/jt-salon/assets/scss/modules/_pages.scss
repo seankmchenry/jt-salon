@@ -106,6 +106,13 @@ Services Page
 /*
 Menu Page
  */
+.table-container--md {
+  overflow-x: scroll;
+
+  @include break-md {
+    overflow: hidden;
+  }
+}
 .services-table {
   width: 100%;
   border: 1px solid $border-color;
