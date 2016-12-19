@@ -164,6 +164,95 @@ acf_add_local_field_group(array (
 ));
 
 acf_add_local_field_group(array (
+	'key' => 'group_5857efc1212c0',
+	'title' => 'Gallery Page Fields',
+	'fields' => array (
+		array (
+			'sub_fields' => array (
+				array (
+					'default_value' => '',
+					'maxlength' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'key' => 'field_585800af36e8a',
+					'label' => 'Tab Title',
+					'name' => 'tab_title',
+					'type' => 'text',
+					'instructions' => 'Enter a title for the tab.',
+					'required' => 1,
+					'conditional_logic' => 0,
+					'wrapper' => array (
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+				),
+				array (
+					'library' => 'all',
+					'min' => 1,
+					'max' => '',
+					'min_width' => 400,
+					'min_height' => 300,
+					'min_size' => '',
+					'max_width' => '',
+					'max_height' => '',
+					'max_size' => '',
+					'mime_types' => 'jpg,jpeg,gif,webp',
+					'insert' => 'append',
+					'key' => 'field_5857efe542ea9',
+					'label' => 'Images',
+					'name' => 'images',
+					'type' => 'gallery',
+					'instructions' => 'Upload the images you want to appear in this gallery tab.',
+					'required' => 1,
+					'conditional_logic' => 0,
+					'wrapper' => array (
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+				),
+			),
+			'min' => 1,
+			'max' => 0,
+			'layout' => 'row',
+			'button_label' => 'Add Tab',
+			'collapsed' => '',
+			'key' => 'field_5857efc642ea8',
+			'label' => 'Gallery Tabs',
+			'name' => 'gallery_tabs',
+			'type' => 'repeater',
+			'instructions' => 'Add gallery tabs by clicking "Add Tab" below.',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+		),
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'post_template',
+				'operator' => '==',
+				'value' => 'page-templates/gallery-page.php',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+));
+
+acf_add_local_field_group(array (
 	'key' => 'group_585027767e951',
 	'title' => 'Highlight Page Fields',
 	'fields' => array (
@@ -754,6 +843,7 @@ acf_add_local_field_group(array (
 	'hide_on_screen' => '',
 	'active' => 1,
 	'description' => '',
+	'local' => 'php',
 ));
 
 acf_add_local_field_group(array (

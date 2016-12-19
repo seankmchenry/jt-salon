@@ -29,6 +29,11 @@ function _s_body_classes( $classes ) {
     $classes[] = 'has-thumbnail';
   }
 
+  /* Gallery page */
+  if ( is_page_template( 'page-templates/gallery-page.php' ) ) {
+    $classes[] = 'gallery-page';
+  }
+
   return $classes;
 }
 add_filter( 'body_class', '_s_body_classes' );

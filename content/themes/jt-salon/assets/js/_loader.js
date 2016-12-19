@@ -22,6 +22,23 @@ var Roots = {
   /* Home */
   home: {
     init: function() {}
+  },
+  /* Gallery */
+  gallery_page: {
+    init: function() {
+      /* Tabslet */
+      $('.gallery-tabs').tabslet({
+        mouseevent: 'click',
+        attribute: 'href',
+        animation: true
+      });
+
+      /* Lightbox */
+      lightbox.option({
+        'positionFromTop': 100,
+        'resizeDuration': 200
+      });
+    }
   }
 };
 

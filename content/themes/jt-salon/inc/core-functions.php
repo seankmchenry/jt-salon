@@ -29,8 +29,8 @@ function _s_custom_image_sizes() {
   update_option( 'large_size_h', 600 );
   update_option( 'large_crop', 1 );
 
-  update_option( 'medium_size_w', 600 );
-  update_option( 'medium_size_h', 475 );
+  update_option( 'medium_size_w', 500 );
+  update_option( 'medium_size_h', 500 );
   update_option( 'medium_crop', 1 );
 
   update_option( 'thumbnail_size_w', 300 );
@@ -165,4 +165,12 @@ function _s_menu_item_price( $price ) {
     $value = '&ndash;';
   }
   return $value;
+}
+
+/**
+ * Create ID from text slug
+ */
+function _s_get_ID_slug( $text ) {
+  $slug = urlencode( strtolower( preg_replace( '/[^a-z]+/i', '', $text ) ) );
+  return $slug;
 }

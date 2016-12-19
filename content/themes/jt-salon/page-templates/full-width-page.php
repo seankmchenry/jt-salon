@@ -12,13 +12,21 @@ get_header(); ?>
     <div id="primary" class="content-area">
       <main id="main" class="site-main" role="main">
 
-        <?php
-        while ( have_posts() ) : the_post();
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
 
-          get_template_part( 'templates/content', 'page' );
+              <?php
+              while ( have_posts() ) : the_post();
 
-        endwhile; // End of the loop.
-        ?>
+                get_template_part( 'templates/content', 'page' );
+
+              endwhile; // End of the loop.
+              ?>
+
+            </div>
+          </div><!-- .row -->
+        </div><!-- .container -->
 
       </main><!-- #main -->
     </div><!-- #primary -->
