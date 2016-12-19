@@ -14,7 +14,7 @@ get_header(); ?>
 
         <div class="container">
           <div class="row center">
-            <div class="col-xs-12 col-sm-10 center">
+            <div class="col-xs-12 col-sm-10">
 
               <?php
               while ( have_posts() ) : the_post(); ?>

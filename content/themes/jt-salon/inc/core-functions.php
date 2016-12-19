@@ -154,3 +154,15 @@ function _s_custom_page_title() {
   }
   echo $title;
 }
+
+/**
+ * Menu page price field display
+ */
+function _s_menu_item_price( $price ) {
+  if ( $price ) {
+    $value = '$' . $price;
+  } else {
+    $value = '&ndash;';
+  }
+  return $value;
+}

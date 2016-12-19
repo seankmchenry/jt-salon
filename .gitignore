@@ -32,7 +32,10 @@ packages/
 
 # Node stuff
 node_modules
+
+# Log files
 npm-debug.log
+content/debug.log
 
 # Compiled CSS
 main.css
