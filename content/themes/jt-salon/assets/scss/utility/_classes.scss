@@ -16,6 +16,11 @@ Font Weights
 .fw-700 { font-weight: 700; }
 
 /*
+Footer
+ */
+.footer-link { @include footer-link; }
+
+/*
 Margins
  */
 .mtp { margin-top: $margin-p !important; }

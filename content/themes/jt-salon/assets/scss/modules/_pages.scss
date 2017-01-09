@@ -88,6 +88,9 @@ Home: CTA
   font-size: $h1;
   text-transform: lowercase;
 }
+.cta-section__link {
+  @include footer-link;
+}
 
 /*
 Services Page

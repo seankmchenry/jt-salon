@@ -30,9 +30,20 @@ if ( $cta_hdl && cta_text ) { ?>
 
               <div class="section-links cta-links cta-section__links">
                 <?php // loop through links
-                while ( have_rows( 'cta_links' ) ): the_row(); ?>
+                while ( have_rows( 'cta_links' ) ): the_row();
+                  // set link fields to variables
+                  $l_txt = get_sub_field( 'link_text' );
+                  $l_page = get_sub_field( 'link_page' );
 
-                <?php endwhile; ?>
+                  // check for text and page
+                  if ( $l_txt && $l_page ) { ?>
+
+                    <!-- Link -->
+                    <a class="cta-link cta-section__link inline-block" href="<?php echo get_permalink( $l_page ); ?>"><?php echo $l_txt; ?></a>
+
+                  <?php }
+
+                endwhile; ?>
               </div>
 
             <?php } ?>
